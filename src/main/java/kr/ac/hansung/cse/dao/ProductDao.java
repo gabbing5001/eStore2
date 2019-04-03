@@ -112,10 +112,10 @@ public class ProductDao {
 
 	}
 
-	public Product infoProductById(int id) {
+	public Product infoProductById(Product product) {
 String sqlStatement = "select * from product where id=?";// 레코드로 넘어온 것을 객체로 맵핑
 		
-		return jdbcTemplate.queryForObject(sqlStatement,new Object[] { id }, new RowMapper<Product>() {
+		return jdbcTemplate.queryForObject(sqlStatement,new Object[] { product }, new RowMapper<Product>() {
 
 			@Override
 			public Product mapRow(ResultSet rs, int rowNum) throws SQLException {

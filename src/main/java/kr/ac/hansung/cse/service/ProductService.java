@@ -33,9 +33,9 @@ public class ProductService {
 		return productDao.getProductById(id);
 	}
 	
-	public Product infoProductById(int id) {
+	public Product infoProductById(Product product) {
 
-		return productDao.infoProductById(id);
+		return productDao.infoProductById(product);
 	}
 
 	public boolean updateProduct(Product product) {
